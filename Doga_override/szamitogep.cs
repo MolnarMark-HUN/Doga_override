@@ -9,7 +9,6 @@ namespace Doga_override
 {
     class szamitogep :aru
     {
-        Form1 f = new Form1();
         public string type { get; set; }
         public int memorysize { get; set; }
         public string opsystem { get; set; }
@@ -19,9 +18,9 @@ namespace Doga_override
 
         }
         
-        public override void buttonclick(object s, EventArgs e)
+        public override void buttonclick()
         {
-            f.button1.Click += (es, se) =>
+            button1.Click += (es, se) =>
             {
                 MessageBox.Show($"Típus:{type}, Memoriaméret:{memorysize}, Operationsystem:{opsystem}");
             };
